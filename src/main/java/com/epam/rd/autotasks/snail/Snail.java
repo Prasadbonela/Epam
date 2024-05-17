@@ -1,4 +1,4 @@
-package com.epam.rd.autotasks.meetastranger;
+package com.epam.rd.autotasks.snail;
 import java.util.Scanner;
 
 public class Snail {
