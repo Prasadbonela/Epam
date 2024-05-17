@@ -9,7 +9,7 @@ public class Snail {
         int h = sc.nextInt();
         int days = 0;
         int workdone = 0;
-        if (a <= b) {
+        if (a == b) {
             System.out.println("Impossible");
         } 
         else {
