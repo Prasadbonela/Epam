@@ -4,23 +4,28 @@ import java.util.*;
 public class Snail {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		int uf=sc.nextInt();
-		int df=sc.nextInt();
-		int hf=sc.nextInt();
-		int count=0;
-		int initial=0;
-		if((uf==df || uf<df)&&(uf<hf)) {
+		int u = sc.nextInt();
+		int d = sc.nextInt();
+		int h = sc.nextInt();
+
+		if((u<h) && (u<=d)){
 			System.out.println("Impossible");
 		}
-		else if(uf>hf) {
+		else if (u>h) {
 			System.out.println(1);
 		}
 		else {
-			initial=(hf-df)/(uf-df);
-			if((hf-df)%(uf-df)!=0) {
-				initial++;
+			int count=0;
+			int days=0;
+			for(int i=0;i<h;i++){
+				days+=u;
+				count++;
+				if(days==h){
+					break;
+				}
+				days-=d;
 			}
-		System.out.println(initial);
-	}
+			System.out.println(count);
+		}
 	}
 }
